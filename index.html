@@ -1,0 +1,2669 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ÉCLAT — Coiffure à domicile</title>
+
+<meta
+    name="description"
+    content="ÉCLAT, coiffure professionnelle à domicile. Coupe, couleur, balayage et coiffure événementielle.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap"
+    rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root{
+
+    --cream:#f5f0e9;
+    --cream2:#ebe3d8;
+
+    --white:#ffffff;
+
+    --black:#171512;
+    --brown:#5c493b;
+
+    --gold:#b69668;
+    --gold-light:#d5bf9c;
+
+    --text:#302b27;
+    --muted:#756e68;
+
+    --serif:"Italiana", serif;
+    --sans:"DM Sans", sans-serif;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:var(--sans);
+
+    color:var(--text);
+
+    background:var(--cream);
+
+    line-height:1.6;
+
+    overflow-x:hidden;
+
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+textarea,
+select{
+    font:inherit;
+}
+
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+.container{
+
+    width:min(1180px, calc(100% - 48px));
+
+    margin:auto;
+
+}
+
+.eyebrow{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+}
+
+.eyebrow::before{
+
+    content:"";
+
+    width:35px;
+
+    height:1px;
+
+    background:var(--gold);
+
+}
+
+h1,
+h2,
+h3{
+
+    font-family:var(--serif);
+
+    font-weight:400;
+
+}
+
+.section-title{
+
+    font-size:clamp(42px,5vw,70px);
+
+    line-height:1.04;
+
+    color:var(--black);
+
+}
+
+.section-intro{
+
+    color:var(--muted);
+
+    max-width:600px;
+
+    margin-top:25px;
+
+    font-size:16px;
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:14px;
+
+    padding:17px 26px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.6px;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    border:1px solid transparent;
+
+    cursor:pointer;
+
+}
+
+.btn-dark{
+
+    background:var(--black);
+
+    color:white;
+
+}
+
+.btn-dark:hover{
+
+    background:var(--gold);
+
+}
+
+.btn-light{
+
+    border-color:rgba(255,255,255,.5);
+
+    color:white;
+
+}
+
+.btn-light:hover{
+
+    background:white;
+
+    color:var(--black);
+
+}
+
+.arrow{
+
+    font-size:17px;
+
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+header{
+
+    position:absolute;
+
+    z-index:100;
+
+    width:100%;
+
+    color:white;
+
+}
+
+.nav{
+
+    height:100px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.logo{
+
+    font-family:var(--serif);
+
+    font-size:31px;
+
+    letter-spacing:7px;
+
+}
+
+.logo small{
+
+    display:block;
+
+    font-family:var(--sans);
+
+    font-size:8px;
+
+    letter-spacing:4px;
+
+    text-align:center;
+
+    margin-top:2px;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    align-items:center;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    text-transform:uppercase;
+
+    letter-spacing:1.5px;
+
+    font-size:10px;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--gold-light);
+
+}
+
+.nav-book{
+
+    border:1px solid rgba(255,255,255,.5);
+
+    padding:12px 18px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    color:white;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(16,13,11,.88) 0%,
+            rgba(16,13,11,.66) 38%,
+            rgba(16,13,11,.18) 70%,
+            rgba(16,13,11,.05) 100%
+        ),
+
+        url("assets/images/hero-coiffure.png")
+
+        center/cover no-repeat;
+
+}
+
+.hero-content{
+
+    max-width:760px;
+
+    padding-top:80px;
+
+}
+
+.hero-tag{
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:var(--gold-light);
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-size:clamp(62px,8vw,118px);
+
+    line-height:.88;
+
+    letter-spacing:-2px;
+
+}
+
+.hero h1 em{
+
+    font-style:italic;
+
+    color:var(--gold-light);
+
+}
+
+.hero-text{
+
+    max-width:540px;
+
+    margin:30px 0 38px;
+
+    font-weight:300;
+
+    color:rgba(255,255,255,.82);
+
+    font-size:17px;
+
+}
+
+.hero-actions{
+
+    display:flex;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-side{
+
+    position:absolute;
+
+    right:45px;
+
+    bottom:45px;
+
+    writing-mode:vertical-rl;
+
+    font-size:9px;
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    color:rgba(255,255,255,.6);
+
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.intro{
+
+    padding:130px 0;
+
+}
+
+.intro-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:100px;
+
+    align-items:center;
+
+}
+
+.intro-images{
+
+    position:relative;
+
+    min-height:650px;
+
+}
+
+.intro-img-main{
+
+    width:76%;
+
+    height:570px;
+
+    object-fit:cover;
+
+}
+
+.intro-img-small{
+
+    position:absolute;
+
+    right:0;
+
+    bottom:0;
+
+    width:45%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border:10px solid var(--cream);
+
+}
+
+.experience{
+
+    position:absolute;
+
+    right:3%;
+
+    top:25px;
+
+    width:145px;
+
+    height:145px;
+
+    border-radius:50%;
+
+    background:var(--black);
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+
+}
+
+.experience strong{
+
+    font-family:var(--serif);
+
+    font-size:37px;
+
+    font-weight:400;
+
+}
+
+.experience span{
+
+    font-size:8px;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    width:90px;
+
+}
+
+.intro-content p{
+
+    margin:25px 0;
+
+    color:var(--muted);
+
+}
+
+.signature{
+
+    font-family:var(--serif);
+
+    font-style:italic;
+
+    font-size:29px;
+
+    margin:35px 0;
+
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services{
+
+    background:#171512;
+
+    color:white;
+
+    padding:130px 0;
+
+}
+
+.services .section-title{
+
+    color:white;
+
+}
+
+.services-head{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    margin-bottom:70px;
+
+}
+
+.services-head p{
+
+    max-width:420px;
+
+    color:#a9a29c;
+
+}
+
+.service-list{
+
+    border-top:1px solid #393530;
+
+}
+
+.service{
+
+    display:grid;
+
+    grid-template-columns:80px 1fr 1fr 120px;
+
+    align-items:center;
+
+    gap:30px;
+
+    padding:35px 0;
+
+    border-bottom:1px solid #393530;
+
+    transition:.35s;
+
+}
+
+.service:hover{
+
+    padding-left:20px;
+
+    background:#1d1a17;
+
+}
+
+.service-number{
+
+    color:var(--gold);
+
+    font-size:12px;
+
+}
+
+.service h3{
+
+    font-size:33px;
+
+}
+
+.service p{
+
+    color:#928c86;
+
+    font-size:14px;
+
+}
+
+.price{
+
+    text-align:right;
+
+    color:var(--gold-light);
+
+    font-family:var(--serif);
+
+    font-size:22px;
+
+}
+
+
+/* =====================================================
+   LARGE IMAGE BANNER
+===================================================== */
+
+.banner{
+
+    min-height:630px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(15,12,10,.72),
+            rgba(15,12,10,.20)
+        ),
+
+        url("assets/images/ambiance-coiffure.png")
+
+        center/cover no-repeat;
+
+    display:flex;
+
+    align-items:center;
+
+    color:white;
+
+}
+
+.banner-content{
+
+    max-width:650px;
+
+}
+
+.banner h2{
+
+    font-size:clamp(50px,6vw,85px);
+
+    line-height:1;
+
+}
+
+.banner p{
+
+    margin:28px 0;
+
+    max-width:510px;
+
+    color:rgba(255,255,255,.8);
+
+}
+
+
+/* =====================================================
+   PRICING
+===================================================== */
+
+.pricing{
+
+    padding:130px 0;
+
+}
+
+.pricing-head{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:auto auto 70px;
+
+}
+
+.pricing-head .eyebrow{
+
+    justify-content:center;
+
+}
+
+.pricing-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+.price-card{
+
+    background:white;
+
+    padding:45px 35px;
+
+    border:1px solid #e4ddd3;
+
+    transition:.35s;
+
+}
+
+.price-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 50px rgba(0,0,0,.08);
+
+}
+
+.price-card.featured{
+
+    background:var(--black);
+
+    color:white;
+
+    transform:translateY(-15px);
+
+}
+
+.price-card.featured:hover{
+
+    transform:translateY(-23px);
+
+}
+
+.price-card .label{
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:var(--gold);
+
+}
+
+.price-card h3{
+
+    font-size:34px;
+
+    margin:15px 0;
+
+}
+
+.price-card .big-price{
+
+    font-family:var(--serif);
+
+    font-size:46px;
+
+    color:var(--gold);
+
+    margin:25px 0;
+
+}
+
+.price-card ul{
+
+    list-style:none;
+
+    margin:30px 0;
+
+}
+
+.price-card li{
+
+    padding:11px 0;
+
+    border-bottom:1px solid rgba(120,110,100,.15);
+
+    font-size:13px;
+
+}
+
+.price-card li::before{
+
+    content:"✓";
+
+    color:var(--gold);
+
+    margin-right:12px;
+
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery{
+
+    background:var(--cream2);
+
+    padding:130px 0;
+
+}
+
+.gallery-head{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    margin-bottom:50px;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:1.15fr .85fr 1fr;
+
+    grid-template-rows:280px 280px;
+
+    gap:15px;
+
+}
+
+.gallery-item{
+
+    overflow:hidden;
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .6s ease;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.06);
+
+}
+
+.gallery-item:first-child{
+
+    grid-row:span 2;
+
+}
+
+.gallery-item:last-child{
+
+    grid-column:span 2;
+
+}
+
+
+/* =====================================================
+   TESTIMONIAL
+===================================================== */
+
+.testimonial{
+
+    padding:130px 0;
+
+    text-align:center;
+
+}
+
+.stars{
+
+    color:var(--gold);
+
+    letter-spacing:7px;
+
+    margin-bottom:30px;
+
+}
+
+.quote{
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-family:var(--serif);
+
+    font-size:clamp(34px,4vw,55px);
+
+    line-height:1.3;
+
+}
+
+.client{
+
+    margin-top:35px;
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    color:var(--muted);
+
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact{
+
+    background:#211d19;
+
+    color:white;
+
+}
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+.contact-image{
+
+    min-height:700px;
+
+    background:
+
+        url("assets/images/contact-coiffure.png")
+
+        center/cover no-repeat;
+
+}
+
+.contact-content{
+
+    padding:100px 9%;
+
+}
+
+.contact-content h2{
+
+    font-size:58px;
+
+}
+
+.contact-content > p{
+
+    color:#aaa39c;
+
+    margin:20px 0 40px;
+
+}
+
+.form-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+}
+
+.form-group{
+
+    margin-bottom:15px;
+
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:16px;
+
+    border:1px solid #48423d;
+
+    background:#292521;
+
+    color:white;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#8f8983;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:var(--gold);
+
+}
+
+textarea{
+
+    height:120px;
+
+    resize:vertical;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:#11100e;
+
+    color:white;
+
+    padding:70px 0 30px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:70px;
+
+    padding-bottom:60px;
+
+}
+
+.footer-logo{
+
+    font-family:var(--serif);
+
+    font-size:35px;
+
+    letter-spacing:6px;
+
+}
+
+.footer-about{
+
+    max-width:350px;
+
+    margin-top:20px;
+
+    color:#817b75;
+
+    font-size:13px;
+
+}
+
+.footer-title{
+
+    color:var(--gold);
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+.footer-links{
+
+    list-style:none;
+
+}
+
+.footer-links li{
+
+    margin:9px 0;
+
+    color:#aaa39d;
+
+    font-size:13px;
+
+}
+
+.copyright{
+
+    border-top:1px solid #292622;
+
+    padding-top:25px;
+
+    color:#5f5a55;
+
+    font-size:10px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+}
+
+
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.reveal.visible{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:900px){
+
+    nav ul{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:65px;
+    }
+
+    .intro-grid,
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .intro-grid{
+        gap:60px;
+    }
+
+    .services-head{
+        display:block;
+    }
+
+    .services-head p{
+        margin-top:25px;
+    }
+
+    .service{
+
+        grid-template-columns:40px 1fr 80px;
+
+    }
+
+    .service p{
+        display:none;
+    }
+
+    .pricing-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .price-card.featured{
+        transform:none;
+    }
+
+    .price-card.featured:hover{
+        transform:translateY(-8px);
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+    .gallery-item:first-child,
+    .gallery-item:last-child{
+
+        grid-row:auto;
+        grid-column:auto;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    .container{
+
+        width:min(100% - 30px,1180px);
+
+    }
+
+    .nav{
+
+        height:80px;
+
+    }
+
+    .logo{
+
+        font-size:25px;
+
+    }
+
+    .hero{
+
+        min-height:820px;
+
+        background-position:62% center;
+
+    }
+
+    .hero h1{
+
+        font-size:53px;
+
+    }
+
+    .hero-text{
+
+        font-size:15px;
+
+    }
+
+    .hero-side{
+
+        display:none;
+
+    }
+
+    .intro,
+    .services,
+    .pricing,
+    .gallery,
+    .testimonial{
+
+        padding:85px 0;
+
+    }
+
+    .intro-images{
+
+        min-height:480px;
+
+    }
+
+    .intro-img-main{
+
+        height:430px;
+
+    }
+
+    .intro-img-small{
+
+        height:210px;
+
+    }
+
+    .experience{
+
+        width:110px;
+
+        height:110px;
+
+    }
+
+    .experience strong{
+
+        font-size:30px;
+
+    }
+
+    .service{
+
+        grid-template-columns:30px 1fr;
+
+    }
+
+    .price{
+
+        grid-column:2;
+
+        text-align:left;
+
+    }
+
+    .banner{
+
+        min-height:550px;
+
+        background-position:55% center;
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+        grid-template-rows:auto;
+
+    }
+
+    .gallery-item{
+
+        height:330px;
+
+    }
+
+    .form-row{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contact-image{
+
+        min-height:450px;
+
+    }
+
+    .contact-content{
+
+        padding:70px 25px;
+
+    }
+
+    .contact-content h2{
+
+        font-size:44px;
+
+    }
+
+    .copyright{
+
+        display:block;
+
+    }
+
+    .copyright span{
+
+        display:block;
+
+        margin:8px 0;
+
+    }
+
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    .reveal{
+
+        opacity:1;
+        transform:none;
+        transition:none;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header>
+
+<div class="container nav">
+
+    <a href="#" class="logo">
+
+        ÉCLAT
+
+        <small>
+            COIFFURE À DOMICILE
+        </small>
+
+    </a>
+
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="#about">À propos</a>
+            </li>
+
+            <li>
+                <a href="#services">Prestations</a>
+            </li>
+
+            <li>
+                <a href="#tarifs">Tarifs</a>
+            </li>
+
+            <li>
+                <a href="#galerie">Galerie</a>
+            </li>
+
+            <li>
+                <a
+                    href="#contact"
+                    class="nav-book">
+                    Prendre rendez-vous
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+<div class="container">
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+
+            Coiffure privée · À votre domicile
+
+        </div>
+
+
+        <h1>
+
+            Votre beauté,<br>
+
+            <em>chez vous.</em>
+
+        </h1>
+
+
+        <p class="hero-text">
+
+            Une expérience coiffure personnalisée dans le confort
+            de votre domicile.
+
+            Coupe, couleur, balayage et coiffure événementielle,
+            avec toute l'attention d'un rendez-vous privé.
+
+        </p>
+
+
+        <div class="hero-actions">
+
+            <a
+                href="#contact"
+                class="btn btn-dark">
+
+                Prendre rendez-vous
+
+                <span class="arrow">→</span>
+
+            </a>
+
+
+            <a
+                href="#services"
+                class="btn btn-light">
+
+                Découvrir les prestations
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="hero-side">
+
+    Paris & région parisienne · Sur rendez-vous
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+    class="intro"
+    id="about">
+
+<div class="container intro-grid">
+
+
+    <div class="intro-images reveal">
+
+
+        <img
+            class="intro-img-main"
+            src="assets/images/coiffeuse.png"
+            alt="Claire Martin, coiffeuse professionnelle à domicile">
+
+
+        <img
+            class="intro-img-small"
+            src="assets/images/coiffure-detail.png"
+            alt="Détail d'un balayage professionnel">
+
+
+        <div class="experience">
+
+            <strong>12</strong>
+
+            <span>
+                années d'expérience
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="intro-content reveal">
+
+
+        <div class="eyebrow">
+
+            À propos
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            La coiffure devient un moment rien qu'à vous.
+
+        </h2>
+
+
+        <p>
+
+            Je suis <strong>Claire Martin</strong>,
+            coiffeuse professionnelle passionnée par
+            la beauté naturelle et les coiffures qui
+            révèlent votre personnalité.
+
+        </p>
+
+
+        <p>
+
+            J'ai choisi la coiffure à domicile pour proposer
+            une expérience différente : plus intime,
+            plus confortable et surtout entièrement
+            personnalisée.
+
+        </p>
+
+
+        <p>
+
+            Chaque rendez-vous commence par un véritable
+            échange afin de comprendre vos envies,
+            votre style et les besoins de vos cheveux.
+
+        </p>
+
+
+        <div class="signature">
+
+            Claire
+
+        </div>
+
+
+        <a
+            href="#contact"
+            class="btn btn-dark">
+
+            Me contacter →
+
+        </a>
+
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section
+    class="services"
+    id="services">
+
+
+<div class="container">
+
+
+    <div class="services-head reveal">
+
+
+        <div>
+
+            <div class="eyebrow">
+
+                Mes prestations
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                Un service<br>
+                sur mesure.
+
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            Des prestations professionnelles réalisées
+            directement chez vous avec des produits
+            sélectionnés pour respecter la beauté
+            et la santé de vos cheveux.
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="service-list reveal">
+
+
+        <div class="service">
+
+            <div class="service-number">
+                01
+            </div>
+
+            <h3>
+                Coupe & brushing
+            </h3>
+
+            <p>
+                Diagnostic, shampoing, coupe personnalisée
+                et mise en forme.
+            </p>
+
+            <div class="price">
+                dès 45 €
+            </div>
+
+        </div>
+
+
+
+        <div class="service">
+
+            <div class="service-number">
+                02
+            </div>
+
+            <h3>
+                Couleur
+            </h3>
+
+            <p>
+                Coloration professionnelle adaptée à
+                votre carnation et votre style.
+            </p>
+
+            <div class="price">
+                dès 65 €
+            </div>
+
+        </div>
+
+
+
+        <div class="service">
+
+            <div class="service-number">
+                03
+            </div>
+
+            <h3>
+                Balayage & lumière
+            </h3>
+
+            <p>
+                Des nuances lumineuses et naturelles
+                travaillées sur mesure.
+            </p>
+
+            <div class="price">
+                dès 85 €
+            </div>
+
+        </div>
+
+
+
+        <div class="service">
+
+            <div class="service-number">
+                04
+            </div>
+
+            <h3>
+                Coiffure événement
+            </h3>
+
+            <p>
+                Mariage, soirée, cérémonie
+                ou événement professionnel.
+            </p>
+
+            <div class="price">
+                dès 70 €
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LARGE IMAGE
+===================================================== -->
+
+<section class="banner">
+
+
+<div class="container">
+
+
+    <div class="banner-content reveal">
+
+
+        <div class="eyebrow">
+
+            Une expérience différente
+
+        </div>
+
+
+        <h2>
+
+            Votre salon vient jusqu'à vous.
+
+        </h2>
+
+
+        <p>
+
+            Plus de déplacement, plus d'attente.
+
+            Je transforme votre intérieur en salon privé
+            le temps d'un rendez-vous entièrement
+            consacré à vous.
+
+        </p>
+
+
+        <a
+            href="#contact"
+            class="btn btn-light">
+
+            Réserver mon moment →
+
+        </a>
+
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TARIFS
+===================================================== -->
+
+<section
+    class="pricing"
+    id="tarifs">
+
+
+<div class="container">
+
+
+    <div class="pricing-head reveal">
+
+
+        <div class="eyebrow">
+
+            Tarifs
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            Choisissez votre moment.
+
+        </h2>
+
+
+        <p
+            class="section-intro"
+            style="margin-left:auto;margin-right:auto;">
+
+            Des formules simples et transparentes.
+
+            Le tarif définitif est confirmé
+            avant chaque prestation.
+
+        </p>
+
+
+    </div>
+
+
+
+    <div class="pricing-grid">
+
+
+        <!-- CARD 1 -->
+
+        <div class="price-card reveal">
+
+
+            <div class="label">
+
+                Essentiel
+
+            </div>
+
+
+            <h3>
+
+                Coupe signature
+
+            </h3>
+
+
+            <div class="big-price">
+
+                45 €
+
+            </div>
+
+
+            <ul>
+
+                <li>Diagnostic personnalisé</li>
+
+                <li>Shampoing & soin</li>
+
+                <li>Coupe</li>
+
+                <li>Brushing</li>
+
+            </ul>
+
+
+            <a
+                href="#contact"
+                class="btn btn-dark">
+
+                Réserver
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- CARD 2 -->
+
+        <div class="price-card featured reveal">
+
+
+            <div class="label">
+
+                Le plus demandé
+
+            </div>
+
+
+            <h3>
+
+                Éclat & couleur
+
+            </h3>
+
+
+            <div class="big-price">
+
+                95 €
+
+            </div>
+
+
+            <ul>
+
+                <li>Diagnostic couleur</li>
+
+                <li>Coloration professionnelle</li>
+
+                <li>Soin protecteur</li>
+
+                <li>Coupe des pointes</li>
+
+                <li>Brushing</li>
+
+            </ul>
+
+
+            <a
+                href="#contact"
+                class="btn btn-light">
+
+                Réserver
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- CARD 3 -->
+
+        <div class="price-card reveal">
+
+
+            <div class="label">
+
+                Premium
+
+            </div>
+
+
+            <h3>
+
+                Balayage lumière
+
+            </h3>
+
+
+            <div class="big-price">
+
+                125 €
+
+            </div>
+
+
+            <ul>
+
+                <li>Diagnostic complet</li>
+
+                <li>Balayage personnalisé</li>
+
+                <li>Patine</li>
+
+                <li>Soin profond</li>
+
+                <li>Brushing</li>
+
+            </ul>
+
+
+            <a
+                href="#contact"
+                class="btn btn-dark">
+
+                Réserver
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section
+    class="gallery"
+    id="galerie">
+
+
+<div class="container">
+
+
+    <div class="gallery-head reveal">
+
+
+        <div>
+
+            <div class="eyebrow">
+
+                Inspirations
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                Quelques créations.
+
+            </h2>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="gallery-grid reveal">
+
+
+        <div class="gallery-item">
+
+            <img
+                src="assets/images/galerie-01.png"
+                alt="Balayage blond naturel">
+
+        </div>
+
+
+
+        <div class="gallery-item">
+
+            <img
+                src="assets/images/galerie-02.png"
+                alt="Coiffure professionnelle">
+
+        </div>
+
+
+
+        <div class="gallery-item">
+
+            <img
+                src="assets/images/coiffure-detail.png"
+                alt="Détail d'une coloration">
+
+        </div>
+
+
+
+        <div class="gallery-item">
+
+            <img
+                src="assets/images/ambiance-coiffure.png"
+                alt="Coiffure événementielle à domicile">
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TESTIMONIAL
+===================================================== -->
+
+<section class="testimonial">
+
+
+<div class="container reveal">
+
+
+    <div class="stars">
+
+        ★ ★ ★ ★ ★
+
+    </div>
+
+
+    <div class="quote">
+
+        “Claire a immédiatement compris ce que je voulais.
+        Pouvoir profiter d'une prestation aussi professionnelle
+        sans quitter la maison change complètement l'expérience.”
+
+    </div>
+
+
+    <div class="client">
+
+        Sophie D. — Cliente depuis 2024
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+    class="contact"
+    id="contact">
+
+
+<div class="contact-grid">
+
+
+    <div
+        class="contact-image"
+        role="img"
+        aria-label="Prestation de coiffure professionnelle à domicile">
+    </div>
+
+
+
+    <div class="contact-content">
+
+
+        <div class="eyebrow">
+
+            Rendez-vous
+
+        </div>
+
+
+        <h2>
+
+            Parlons de vos cheveux.
+
+        </h2>
+
+
+        <p>
+
+            Décrivez-moi votre envie et vos disponibilités.
+
+            Je vous recontacte pour confirmer
+            votre rendez-vous.
+
+        </p>
+
+
+
+        <form onsubmit="demoForm(event)">
+
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <input
+                        type="text"
+                        placeholder="Votre nom"
+                        aria-label="Votre nom"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <input
+                        type="tel"
+                        placeholder="06 XX XX XX XX"
+                        aria-label="Votre numéro de téléphone"
+                        required>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <input
+                    type="email"
+                    placeholder="votre.email@xxxxx.fr"
+                    aria-label="Votre adresse e-mail">
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <select
+                    aria-label="Prestation souhaitée"
+                    required>
+
+                    <option value="">
+                        Prestation souhaitée
+                    </option>
+
+                    <option>
+                        Coupe & brushing
+                    </option>
+
+                    <option>
+                        Coloration
+                    </option>
+
+                    <option>
+                        Balayage
+                    </option>
+
+                    <option>
+                        Coiffure événementielle
+                    </option>
+
+                    <option>
+                        Autre demande
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <textarea
+                    placeholder="Parlez-moi de votre projet..."
+                    aria-label="Votre message">
+                </textarea>
+
+            </div>
+
+
+
+            <button
+                class="btn btn-light"
+                type="submit">
+
+                Envoyer ma demande →
+
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+<div class="container">
+
+
+    <div class="footer-grid">
+
+
+        <div>
+
+
+            <div class="footer-logo">
+
+                ÉCLAT
+
+            </div>
+
+
+            <p class="footer-about">
+
+                Coiffure professionnelle à domicile.
+
+                Une expérience personnalisée pensée
+                pour révéler votre style dans le confort
+                de votre intérieur.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div>
+
+
+            <div class="footer-title">
+
+                Contact
+
+            </div>
+
+
+            <ul class="footer-links">
+
+                <li>
+                    06 XX XX XX XX
+                </li>
+
+                <li>
+                    contact@xxxxx.fr
+                </li>
+
+                <li>
+                    Paris & région parisienne
+                </li>
+
+            </ul>
+
+
+        </div>
+
+
+
+        <div>
+
+
+            <div class="footer-title">
+
+                Horaires
+
+            </div>
+
+
+            <ul class="footer-links">
+
+                <li>
+                    Lundi — Vendredi
+                </li>
+
+                <li>
+                    9h00 — 19h00
+                </li>
+
+                <li>
+                    Samedi sur rendez-vous
+                </li>
+
+            </ul>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+
+        <span>
+
+            © 2026 ÉCLAT — Site de démonstration
+
+        </span>
+
+
+        <span>
+
+            Mentions légales · Confidentialité
+
+        </span>
+
+
+    </div>
+
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+/* =====================================================
+   ANIMATIONS AU SCROLL
+===================================================== */
+
+const observer = new IntersectionObserver(
+
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+
+    {
+
+        threshold:0.12
+
+    }
+
+);
+
+
+document
+    .querySelectorAll(".reveal")
+    .forEach((element) => {
+
+        observer.observe(element);
+
+    });
+
+
+
+/* =====================================================
+   FORMULAIRE DE DEMONSTRATION
+===================================================== */
+
+function demoForm(event){
+
+    event.preventDefault();
+
+    alert(
+
+        "Ceci est un formulaire de démonstration.\n\n" +
+
+        "Sur un véritable site client, cette demande " +
+
+        "pourrait être envoyée directement par e-mail " +
+
+        "ou reliée à un système de réservation."
+
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
